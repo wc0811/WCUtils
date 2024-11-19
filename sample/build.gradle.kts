@@ -1,28 +1,20 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-//    `maven-publish`
 }
 
 android {
-    namespace = "com.yp.wcutils"
+    namespace = "com.yp.sample"
     compileSdk = 35
 
     defaultConfig {
+        applicationId = "com.yp.sample"
         minSdk = 26
         targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
     }
 
     compileOptions {
@@ -45,16 +37,3 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
-//publishing {
-//    publications {
-//        register<MavenPublication>("release") {
-//            groupId = "com.github.wc0811"
-//            artifactId = "WCUtils"
-//            version = "1.0"
-//
-//            afterEvaluate {
-//                from(components["release"])
-//            }
-//        }
-//    }
-//}

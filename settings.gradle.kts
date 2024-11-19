@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "WCUtils"
 include(":app")
- 
+include(":sample")

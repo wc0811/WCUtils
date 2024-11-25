@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-//    `maven-publish`
+    `maven-publish`
 }
 
 android {
@@ -45,16 +45,16 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
-//publishing {
-//    publications {
-//        register<MavenPublication>("release") {
-//            groupId = "com.github.wc0811"
-//            artifactId = "WCUtils"
-//            version = "1.0"
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.github.wc0811"
+            artifactId = "WCUtils"
+            version = "1.0"
 //
-//            afterEvaluate {
-//                from(components["release"])
-//            }
-//        }
-//    }
-//}
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
+}

@@ -10,7 +10,6 @@ android {
     defaultConfig {
         applicationId = "com.yp.sample"
         minSdk = 26
-        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -23,6 +22,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "17"
+    }
+    lint {
+        targetSdk = 34
     }
 }
 

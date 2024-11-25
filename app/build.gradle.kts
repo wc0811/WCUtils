@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     `maven-publish`
 }
@@ -10,7 +10,6 @@ android {
 
     defaultConfig {
         minSdk = 26
-        targetSdk = 34
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -31,6 +30,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "17"
+    }
+    lint {
+        targetSdk = 34
     }
 }
 
